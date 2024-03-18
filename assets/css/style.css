@@ -1,0 +1,1093 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Comfortaa", sans-serif;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+body {
+    width: 100%;
+    max-width: 100%;
+    background: url(../images/Desktop\ -\ 5.png) no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+a {
+    cursor: pointer;
+}
+.banner-container {
+    overflow: hidden;
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: 100%;
+}
+  
+.banner {
+    white-space: nowrap;
+    animation: scrollBanner 30s linear infinite;
+  }
+@keyframes scrollBanner {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+}
+header {
+    width: 100%;
+    max-width: 100%;
+    height: 250px;
+    background: linear-gradient(rgba(139, 107,100, 1), rgba(255, 255, 255, 1));
+    background-size: cover;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#searchInput {
+    padding: 8px; 
+    border: 1px solid #ccc; 
+    border-radius: 10px; 
+    flex: 1;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.5);
+}
+#searchForm button {
+    padding: 8px 16px; 
+    background-color: rgba(139, 107, 100, 1); 
+    color: #fff; 
+    border: none; 
+    border-radius: 10px; 
+    margin-left: 8px; 
+    cursor: pointer; 
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.5);
+}
+#searchForm button:hover {
+    background-color: #fff; 
+    color:rgba(139, 107, 100, 1);
+}
+#searchResults{
+    display: inline-block;
+}
+#resultats{
+    width: 400px;
+    height: 50px;
+    font-size: 12px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.5);
+}
+#clearButton{
+    padding: 8px; 
+    border: 1px solid #ccc; 
+    border-radius: 10px; 
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.5);
+}
+#logoUser>img {
+    width: 40px;
+    height: 40px;
+    padding-left: 50px;
+    cursor: pointer;
+}
+
+#logoUser>img:last-child {
+    padding-right: 60px;
+}
+
+#logo {
+    padding-left: 60px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+#nav {
+    width: 100%;
+    max-width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+}
+#nav>.navId{
+    color:rgba(139, 107, 100, 1);
+    font-weight: 600;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 10px;
+    width: 200px;
+    text-align: center;
+    z-index: 10;
+}
+#nav>.navId:hover {
+    background-color: #8B6B64;
+    color: #fff;
+    transition: 1s ease-in-out;
+}
+
+#nav>.navId>li{
+    display: none;
+    background-color: #f9f9f9;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    left: 0;
+    top: 100%; 
+}
+#nav>.navId:hover>li{
+    display: block; 
+}
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 400px;
+    height: 400px;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+  }
+
+#openPopupButton{
+    cursor: pointer;
+    background-color: rgb(139, 107, 100);
+    animation-name: couleur,taille;
+    animation-duration: 10s, 20s;
+    padding: 10px;
+    border-radius: 3px;
+    border-style: none;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+@keyframes couleur{
+    from{background-color: rgb(139, 107, 100);}
+    50%{background-color: rgb(240, 211, 44);}
+    to{background-color: rgb(139, 107, 100);}
+}
+
+@keyframes taille{
+    from{width: 40%}
+    50%{width: 20%;}
+    to{width: 40%;}
+}
+#openPopupButton>p{
+    font-size: 20px;
+    font-weight: 600;
+}
+.popup-content {
+    background-color: #fff;
+    padding: 20px;
+    max-width: 400px;
+    text-align: center;
+}
+
+.popup-content>.clique>a{
+    color: #8B6B64;
+    font-weight: 600;
+    padding:10px;
+}
+.popup-content>.clique>a:hover{
+    color: #fff;
+    background-color: #8B6B64;
+}
+.popup-content>img{
+    width: 120px;
+    height: 180px;
+}
+#openPopupButton {
+    margin-top: 20px;
+}
+  
+#closePopupButton {
+    margin-top: 30px;
+    padding: 5px;
+    color: #8B6B64;
+    border: none;
+}
+#closePopupButton:hover{
+    background-color: #8B6B64;
+    color: #fff;
+}
+#produits {
+    width: 100%;
+    height: 100px;
+    display: flex;
+}
+
+#produits>h1 {
+    font-size: 20px;
+    padding-left: 60px;
+   padding-top: 70px;
+}
+
+#produits>figure>img {
+    width: 120px;
+    height: 180px;
+}
+
+#containerLivres {
+    display: grid;
+    grid-template-columns: repeat(4, 2fr);
+    width: 100%;
+    padding: 80px 0px 60px 0px;
+}
+
+.livres {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.livres>.infos {
+    display: flex;
+    align-items: center;
+}
+
+.livres>figure>img {
+    width: 122px;
+    height: 152px;
+    box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.5);
+}
+
+.livres>.info>.titreLivre {
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.livres>.info>.tome {
+    font-size: 15px;
+    text-align: center;
+}
+
+.livres>.info>.auteur {
+    font-size: 15px;
+    margin-top: 15px;
+    text-align: center;
+}
+
+#containerLivres>.livres>.info>.prix {
+    width: 75px;
+    height: 25px;
+    background-color: #8B6B64;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    margin-top: 20px;
+    margin: 15px auto;
+    border-radius: 5px;
+    box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+#containerLivres>.livres>.info>.prix:hover{
+    background-color: #fff;
+    color: #8B6B64;
+    transition: 1s ease-in-out;
+}
+#categories {
+    margin-top: 80px;
+    height: 190px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#categories>p {
+    font-size: 15px;
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+
+#categories>.vignettesContainer {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 20px;
+    justify-items: center; 
+    align-items: center; 
+}
+
+#categories>.vignettesContainer>.vignettes {
+    width: 200px;
+    max-width: 100%;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #8B6B64;
+    margin-top: 20px;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+#categories>.vignettesContainer>.vignettes:hover {
+    background-color: #fff;
+    color: #8B6B64;
+    font-weight: 600;
+    transition: 1s ease-in-out;
+}
+
+#avis {
+    padding-top: 120px;
+}
+
+#avis>p {
+    text-align: center;
+    padding-right: 90px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+#containerAvis {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.avisContainer {
+    width: 385px;
+    height: 500px;
+    border-radius: 120px 150px 0px 140px;
+    background-color: rgb(248, 194, 6, 40%);
+    margin-right: 20px;
+    box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.5);
+}
+
+#containerAvis>.avisContainer:last-child {
+    border-radius: 140px 0px 150px 120px;
+}
+
+#profil {
+    display: flex;
+}
+
+#profil>img {
+    padding-top: 30px;
+    padding-left: 50px;
+}
+
+#profil>p {
+    font-size: 15px;
+    font-weight: bold;
+    padding-top: 60px;
+    padding-left: 20px;
+}
+
+.avisContainer>p {
+    text-align: left;
+    width: 260px;
+    height: 180px;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+.avisContainer>#profil2 {
+    display: flex;
+}
+
+.avisContainer>#profil2>img {
+    padding-left: 270px;
+    padding-top: 50px;
+
+}
+
+.avisContainer>#profil2>p {
+    padding-top: 60px;
+    position: absolute;
+    padding-left: 170px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.avisContainer>#livreRef {
+    display: flex;
+}
+
+#livreRef>img {
+    padding-left: 55px;
+    padding-top: 25px;
+    cursor: pointer;
+}
+
+#livreRef>p {
+    padding-top: 50px;
+    padding-left: 30px;
+    ;
+}
+
+.avisContainer>#livreRef2 {
+    display: flex;
+}
+
+#livreRef2>img {
+    margin-left: 225px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+#livreRef2>p {
+    margin-top: 30px;
+    margin-left: 40px;
+    position: absolute;
+    text-align: right;
+}
+
+#conteneurLivres2 {
+    display: grid;
+    grid-template-columns: repeat(4, 2fr);
+    width: 100%;
+    margin-top: 40px;
+}
+
+.livres {
+    cursor: pointer;
+}
+
+.livres>.info {
+    text-align: center;
+}
+
+#produits2 {
+    width: 100%;
+    display: flex;
+    margin-top: 60px;
+}
+
+#produits2>h1 {
+    font-size: 20px;
+    padding-left: 60px;
+    padding-top: 60px;
+}
+
+#produits2>figure>img {
+    width: 180px;
+    height: 118px;
+    padding-left: 60px;
+    
+}
+
+#conteneurLivres2>.livres>.info>.prix {
+    width: 75px;
+    height: 25px;
+    background-color: #8B6B64;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    margin-top: 20px;
+    border-radius: 5px;
+    margin: 15px auto;
+    box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.5);
+}
+#conteneurLivres2>.livres>.info>.prix:hover{
+    background-color: #fff;
+    color: #8B6B64;
+    transition: 1s ease-in-out;
+}
+#bienvenue {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#bienvenue>p {
+    height: 90px;
+    width: 100%;
+    padding: 80px;
+}
+
+#bienvenue>p>a {
+    color: #000;
+}
+
+#bienvenue>p>a:hover {
+    background-color: rgba(139, 107, 100, 1);
+    color: #fff;
+    transition: 1s ease-in-out;
+}
+
+footer {
+    display: flex;
+    margin-top: 80px;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 100%;
+}
+
+#logo1 {
+    margin-top: 20px;
+    margin-left: 100px;
+}
+#newsletter {
+    display: flex;
+}
+
+#newsletter>figure>img {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+}
+fieldset{
+    width: 300px;
+    height: 400px;
+    background-color: #8B6B64;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+fieldset>legend{
+    font-size: 15px;
+    font-weight: bold;
+}
+#formulaire>fieldset>.champ{
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+input[type="text"],
+input[type="email"],
+input[type="date"] {
+    width: 200px;
+    height: 30px;
+    border-radius: 15px;
+    border: none;
+}
+input[type="submit"] {
+    display: block;
+    background-color: #FCE8D5;
+    border-radius: 15px;
+    cursor: pointer;
+    margin: 0 auto;
+    width: 80px;
+    height: 20px;
+    margin-top: 20px;
+}
+#formulaire {
+  position: relative;
+}
+#croix {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  background-size: cover;
+}
+footer>#newsletter>p {
+    width: 300px;
+    margin-left: 20px;
+}
+
+#socialMedia {
+    margin-right: 100px;
+}
+
+#socialMedia>img {
+    width: 56px;
+    height: 54px;
+    cursor: pointer;
+}
+
+#basDePage {
+    height: 250px;
+    width: 100%;
+    max-width: 100%;
+    background: linear-gradient(rgba(255, 255, 255, 1), rgba(139, 107, 100, 1));
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#basDePage>p {
+    margin-right: 100px;
+}
+
+#basDePage>p>a {
+    color: #fff;
+}
+
+#basDePage>p>a:hover {
+    color: rgba(1, 77, 110, 1);
+    background-color: #fff;
+}
+
+
+/*produit.css*/
+
+#recto{
+    width: 785px; 
+    height: 585px;
+    background: linear-gradient(to bottom, rgba(139, 107, 100, 1) 30%, rgba(252, 232, 213, 1) 70%);
+    border-radius: 15px;
+    margin-top: 60px;
+}
+#colonnesRecto{
+    display: flex;
+}
+#colonneGRecto{
+    flex: 2;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#colonneGRecto>figure>img{
+    width: 200px;
+    height: 280px;
+    border-radius: 15px;
+    box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.5);
+}
+#colonneGRecto>p{
+    font-size: 12px;
+    font-weight: 600;
+    color:rgb(139, 107, 100);
+    padding-top: 10px;
+}
+#colonneGRecto>.panier{
+    width: 100px;
+    height: 40px;
+    border-radius: 15px;
+    background-color: #8B6B64;
+    color: #fff;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 15px;
+}
+#colonneDRecto{
+    flex: 2;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+}
+#colonneDRecto>.story{
+    width: 275px;
+    height: 400px;
+    border-radius: 0px 15px 15px 0px;
+    display: flex;
+    background: #fff;
+    box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.5);
+}
+#colonneDRecto>.story>figure{
+    display: block;
+}
+#colonneDRecto>.story>figure>img{
+    width: 50px;
+    height: 50px;
+    float: right;
+}
+#storyText{
+    font-size: 12px;
+    padding-top: 60px;
+    padding-left: 10px;
+}
+#colonneDRecto>h1{
+    font-size: 15px;
+    text-align: center;
+    font-weight: 600;
+    padding: 30px;
+}
+.bleu {
+    color: rgba(139, 107, 100, 1);
+}
+#verso{
+    width: 785px; 
+    height: 585px;
+    background: linear-gradient(to bottom, rgba(252, 232, 213, 1) 30%, rgba(139, 107, 100, 1) 70%);
+    border-radius: 15px;
+    margin-top: 60px;
+}
+#colonnesVerso{
+    display: flex;
+}
+#colonnesGVerso{
+    flex: 2;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#car{
+    width: 280px;
+    height: 200px;
+    background-color: #fff;
+    margin-top: 60px;
+    margin-left: 60px;
+    border-radius: 15px;
+    box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.5);
+}
+#car>p{
+    padding-left: 50px;
+    font-size: 12px;
+    padding-bottom: 10px;
+}
+
+#onglets {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-weight: 600;
+    width: 100%;
+    margin-left: 60px;
+}
+#onglets>p{
+    cursor: pointer;
+}
+#onglets>.ongletBleu {
+    color: rgba(139, 107, 100, 1);
+}
+#colonneDVerso{
+    flex: 2;
+}
+#colonneDVerso>h1{
+    font-size: 15px;
+    text-align: center;
+    padding: 20px;
+    
+}
+#memeAuteur{
+    width: 350px;
+    height: 450px;
+    background-color: #fff;
+    margin: 0 auto; 
+    border-radius: 0px 15px 15px 0px;
+    box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.5); 
+}
+#livresContainer{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    padding-top: 20px;
+}
+.livres2 {
+    width: 175px;
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+ }
+#livresContainer>.livres2>.info>.titreLivre{
+    font-size: 12px;
+    padding-bottom: 10px;
+ }
+ #livresContainer>.livres2>.info>.prix{
+    width: 60px;
+    height: 20px;
+    background-color: #8B6B64;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    margin: 0 auto;
+    margin-bottom: 5px;
+ }
+
+/*loisirs et voyages*/
+#colonneGauche{
+    flex:1;
+    margin-left: 20px;
+    margin-top: 60px;
+}
+#colonneGauche>p{
+    margin-top: 25px;
+}
+#colonneDroite{
+    flex:6;
+}
+#colonnes{
+    display: flex;
+}
+#titre{
+    padding-top: 60px;
+}
+#titre>h1{
+    text-align: center;
+}
+#titre>.flex>p{
+    margin: 40px 100px 100px 50px;
+    font-size: 18px;
+}
+#titre>.flex>img{
+    margin-right: 50px;
+    width: 136px;
+    height: 186px;
+}
+.flex{
+    display: flex;
+}
+.sousTitres{
+    padding-left: 95px;
+    padding-top: 60px;
+    font-size: 20px;
+    font-weight: 600;
+    z-index: 5555;
+}
+#conteneurLivres3 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    padding-top: 60px;
+}
+#coupsDeCoeur>.flex>img{
+    width: 100px;
+    height: 155px;
+    padding-top: 20px;
+}
+#coupsDeCoeur>.flex>p{
+    padding: 115px 0px 0px;
+}
+.presLivres{
+    display: flex;
+    padding-left: 160px;
+    padding-top: 60px;
+}
+.presLivres>img{
+    box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.5);
+    width: 122px;
+    height: 152px;
+}
+.column{
+    display: flex;
+    flex-direction: column;
+}
+.presLivres>.column>p{
+    padding-left: 60px;
+    padding-bottom: 20px;
+    margin-right: 300px;
+}
+.livres>.info>.prix{
+    width: 75px;
+    height: 25px;
+    background-color: #8B6B64;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    margin-top: 20px;
+    margin: 15px auto;
+    border-radius: 5px;
+    box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+.livres>.info>.prix:hover{
+    background-color: #fff;
+    color: #8B6B64;
+    transition: 1s ease-in-out;
+}
+#popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    display: none;
+}
+
+.hidden {
+    display: none;
+}
+/*media query*/
+@media screen and (max-width: 1400px){
+    #titre>.flex>img{
+        display: none;
+    }
+}
+@media screen and (max-width: 1170px){
+    .trait{
+        display: none;
+    }
+    #produit{
+        display: flex;
+        flex-direction: column;
+    }
+    #produit>figure>img{
+        margin: 0 auto;
+    }
+    #produit>.descriptionProduit>p:first-child{
+        font-size: 18px;
+        padding: 20px auto;
+    }
+    #produit>.descriptionProduit>.prix2{
+        font-size: 18px;
+        padding: 10px auto;
+    }
+    #produit>.descriptionProduit>button{
+        padding: 10px auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #resume {
+        margin-top: 200px;
+        padding-left: 0px;
+    }
+    #car {
+        padding-left: 0px;
+    }
+    #memeAuteur{
+        padding-left: 0px;
+    }
+    #resume>p:first-child{
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    #car>p:first-child{
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    #memeAuteur>p:first-child{
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+}
+@media screen and (max-width: 1115px){
+    #colonneGauche{
+        display: none;
+    }
+    #coupsDeCoeur>.flex>img{
+        display: none;
+    }
+    #coupsDeCoeur>.flex>p{
+        padding-left: 95px;
+        padding-right: 0;
+    }
+}
+@media screen and (max-width: 1040px){
+    #titre>h1{
+        padding-left: 0px;
+        text-align: center;
+    }
+}
+@media screen and (max-width: 980px){
+    #avis{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    #containerAvis{
+        flex-direction: column;
+        justify-content: center;
+    }
+    #avis>#containerAvis>.avisContainer{
+        margin-bottom: 10px;
+        margin-right: 0px;
+    }
+    .presLivres>.column>p:last-child{
+        display: none;
+    }
+    
+}
+@media screen and (max-width: 920px){
+    #nav{
+        display: flex;
+        flex-direction: column;
+    }
+    #containerLivres{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    #conteneurLivres2 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    #categories>.vignettesContainer {
+        gap: 10px;
+        grid-template-columns: repeat(2,1fr);
+        justify-content: center;
+        align-items: center;
+    }
+    #containerAvis{
+        padding-top: 10px;
+        padding-bottom: 20px;
+    }
+    #produits>h1{
+        padding-left: 0px;
+        margin: 0 auto;
+    }
+    #produits>figure>img {
+        display: none;
+    }
+    #produits2{
+        margin: 0 auto;
+    }
+    #produits2>figure>img {
+        display: none;
+    }
+    #produits2>h1 {
+        position: relative;
+        padding-top: 0px;
+    }
+    #search{
+        display: none;
+    }
+    #logo1{
+        display: none;
+    }
+    #newsletter{
+        display: none;
+    }
+    #bienvenue>p:last-child{
+        display: none;
+    }
+    #bienvenue>p:first-child{
+        padding-top: 20px;
+    }
+    #produits2{
+        padding-top: 20px;
+    }
+    #socialMedia {
+        margin: 0 auto;
+    }
+    .navId{
+        padding-bottom: 10px;
+    }
+    #onglets{
+        margin-top: 20px;
+    }
+}
+@media (max-width: 768px) {
+    #conteneurLivres3 {
+        padding-top: 40px;
+    }
+
+    .livres {
+        width: 100%; 
+    }
+    #titre>.flex{
+        display: none;
+    }
+    .presLivres{
+        padding-left: 60px;
+    }
+    .column{
+        width: 50px;
+    }
+}
+
+
+
+    
+
+
+
+
+
+
